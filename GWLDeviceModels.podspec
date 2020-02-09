@@ -1,7 +1,7 @@
 Pod::Spec.new do |spec|
 
   spec.name                = "GWLDeviceModels"
-  spec.version             = "1.0.0"
+  spec.version             = "1.0.1"
   spec.summary             = "iOS 设备型号判断"
   spec.homepage            = "https://mouos.com"
   spec.license             = "MIT"

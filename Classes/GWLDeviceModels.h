@@ -11,7 +11,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 typedef NS_ENUM(NSInteger, DeviceModelsType) {
-    DeviceModelsTypeIPhoneNone,
+    DeviceModelsTypeIPhoneUnknown,
     
     DeviceModelsTypeIPhoneSimulator,
     
@@ -41,45 +41,42 @@ typedef NS_ENUM(NSInteger, DeviceModelsType) {
     DeviceModelsTypeIPhone11ProMax,
     
     DeviceModelsTypeIPodTouch,
-    DeviceModelsTypeIPodTouch2,
-    DeviceModelsTypeIPodTouch3,
-    DeviceModelsTypeIPodTouch4,
-    DeviceModelsTypeIPodTouch5,
-    DeviceModelsTypeIPodTouch6,
-    DeviceModelsTypeIPodTouch7,
+    DeviceModelsTypeIPodTouch_2nd,
+    DeviceModelsTypeIPodTouch_3rd,
+    DeviceModelsTypeIPodTouch_4th,
+    DeviceModelsTypeIPodTouch_5th,
+    DeviceModelsTypeIPodTouch_6th,
+    DeviceModelsTypeIPodTouch_7th,
     
     DeviceModelsTypeIPadMini,
     DeviceModelsTypeIPadMini2,
     DeviceModelsTypeIPadMini3,
     DeviceModelsTypeIPadMini4,
-    DeviceModelsTypeIPadMini5,
+    DeviceModelsTypeIPadMini_5th,
     
     DeviceModelsTypeIPad,
     DeviceModelsTypeIPad2,
-    DeviceModelsTypeIPad3,
-    DeviceModelsTypeIPad4,
-    DeviceModelsTypeIPad5,
-    DeviceModelsTypeIPad6,
+    DeviceModelsTypeIPad_3rd,
+    DeviceModelsTypeIPad_4th,
+    DeviceModelsTypeIPad_5th,
+    DeviceModelsTypeIPad_6th,
+    DeviceModelsTypeIPad_7th,
     
-    DeviceModelsTypeIPadPro12_9,
-    DeviceModelsTypeIPadPro2_12_9,
-    DeviceModelsTypeIPadPro3_12_9,
-    DeviceModelsTypeIPadPro9_7,
-    DeviceModelsTypeIPadPro10_5,
-    DeviceModelsTypeIPadPro11,
+    DeviceModelsTypeIPadPro_inch12_9,
+    DeviceModelsTypeIPadPro_2nd_inch12_9,
+    DeviceModelsTypeIPadPro_3rd_inch12_9,
+    DeviceModelsTypeIPadPro_inch9_7,
+    DeviceModelsTypeIPadPro_inch10_5,
+    DeviceModelsTypeIPadPro_inch11,
     
     DeviceModelsTypeIPadAir,
     DeviceModelsTypeIPadAir2,
-    DeviceModelsTypeIPadAir3
+    DeviceModelsTypeIPadAir_3rd
 };
 
 @interface GWLDeviceModels : NSObject
 
-+ (instancetype)sharedInstance ;
-
-- (DeviceModelsType)modelsType ;
-
-- (NSString *)modelsString ;
++ (void)modelsString:(void (^)(NSString *string))modelsString modelsType:(void (^)(DeviceModelsType type))modelsType ;
 
 @end
 
