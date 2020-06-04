@@ -1,13 +1,13 @@
 Pod::Spec.new do |spec|
 
   spec.name                = "SPDeviceModels"
-  spec.version             = "v1.0.0"
+  spec.version             = "1.0.3"
   spec.summary             = "iOS 设备型号判断"
   spec.homepage            = "https://mouos.com"
   spec.license             = "MIT"
   spec.author              = { "高文立" => "swiftprimer@gmail.com" }
   spec.platform            = :ios, "10.0"
-  spec.source              = { :git => "https://github.com/mouos/GWLDeviceModels.git", :tag => "#{spec.version}" }
+  spec.source              = { :git => "https://github.com/mouos/SPDeviceModels.git", :tag => "#{spec.version}" }
   spec.source_files        = "Classes", "Classes/**/*.{h,m}"
   spec.exclude_files       = "Classes/Exclude"
   spec.public_header_files = "Classes/**/*.h"
