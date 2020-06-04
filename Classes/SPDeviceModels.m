@@ -6,10 +6,10 @@
 //  Copyright © 2020 gwl. All rights reserved.
 //  
 
-#import "GWLDeviceModels.h"
+#import "SPDeviceModels.h"
 #include <sys/sysctl.h>
 
-@implementation GWLDeviceModels
+@implementation SPDeviceModels
 
 + (void)modelsString:(void (^)(NSString * _Nonnull))modelsString modelsType:(void (^)(DeviceModelsType))modelsType {
     DeviceModelsType type = DeviceModelsTypeUnknown;

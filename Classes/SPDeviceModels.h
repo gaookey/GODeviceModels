@@ -76,7 +76,7 @@ typedef NS_ENUM(NSInteger, DeviceModelsType) {
     DeviceModelsTypeIPadAir_3rd
 };
 
-@interface GWLDeviceModels : NSObject
+@interface SPDeviceModels : NSObject
 
 + (void)modelsString:(void (^)(NSString *string))modelsString modelsType:(void (^)(DeviceModelsType type))modelsType ;
 
