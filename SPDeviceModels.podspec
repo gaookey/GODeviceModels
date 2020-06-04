@@ -1,7 +1,7 @@
 Pod::Spec.new do |spec|
 
   spec.name                = "SPDeviceModels"
-  spec.version             = "1.0.0"
+  spec.version             = "1.0.5"
   spec.summary             = "iOS 设备型号判断"
   spec.homepage            = "https://mouos.com"
   spec.license             = "MIT"
