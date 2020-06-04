@@ -4,16 +4,16 @@
 //
 //  Created by 高文立 on 2020/1/21.
 //  Copyright © 2020 gwl. All rights reserved.
-//
+//  
 
 #import "GWLDeviceModels.h"
 #include <sys/sysctl.h>
 
 @implementation GWLDeviceModels
 
-+ (void)modelsString:(void (^)(NSString * _Nonnull))modelsString modelsType:(void (^)(DeviceModelsType))modelsType {    
-    DeviceModelsType type = DeviceModelsTypeIPhoneUnknown;
-    NSString *string = @"型号未知";
++ (void)modelsString:(void (^)(NSString * _Nonnull))modelsString modelsType:(void (^)(DeviceModelsType))modelsType {
+    DeviceModelsType type = DeviceModelsTypeUnknown;
+    NSString *string = @"Unknown";
     
     size_t size;
     int nR = sysctlbyname("hw.machine", NULL, &size, NULL, 0);
@@ -143,11 +143,11 @@
         string = @"iPad Pro (9.7-inch) (A1674/A1675)";
     }
     if ([platform isEqualToString:@"iPad7,1"]) {
-        type = DeviceModelsTypeIPadPro_2nd_inch12_9;
+        type = DeviceModelsTypeIPadPro_inch12_9_2nd;
         string = @"iPad Pro (12.9-inch) (2nd generation) (A1670)";
     }
     if ([platform isEqualToString:@"iPad7,2"]) {
-        type = DeviceModelsTypeIPadPro_2nd_inch12_9;
+        type = DeviceModelsTypeIPadPro_inch12_9_2nd;
         string = @"iPad Pro (12.9-inch) (2nd generation) (A1671/A1821)";
     }
     if ([platform isEqualToString:@"iPad7,3"]) {
@@ -158,37 +158,31 @@
         type = DeviceModelsTypeIPadPro_inch10_5;
         string = @"iPad Pro (10.5-inch) (A1709)";
     }
-    if ([platform isEqualToString:@"iPad8,1"]) {
+    if ([platform isEqualToString:@"iPad8,1"] || [platform isEqualToString:@"iPad8,2"]) {
         type = DeviceModelsTypeIPadPro_inch11;
         string = @"iPad Pro (11-inch) (A1980)";
     }
-    if ([platform isEqualToString:@"iPad8,2"]) {
-        type = DeviceModelsTypeIPadPro_inch11;
-        string = @"iPad Pro (11-inch) (A1980)";
-    }
-    if ([platform isEqualToString:@"iPad8,3"]) {
+    if ([platform isEqualToString:@"iPad8,3"] || [platform isEqualToString:@"iPad8,4"]) {
         type = DeviceModelsTypeIPadPro_inch11;
         string = @"iPad Pro (11-inch) (A1934/A1979/A2013)";
     }
-    if ([platform isEqualToString:@"iPad8,4"]) {
-        type = DeviceModelsTypeIPadPro_inch11;
-        string = @"iPad Pro (11-inch) (A1934/A1979/A2013)";
-    }
-    if ([platform isEqualToString:@"iPad8,5"]) {
-        type = DeviceModelsTypeIPadPro_3rd_inch12_9;
+    if ([platform isEqualToString:@"iPad8,5"] || [platform isEqualToString:@"iPad8,6"]) {
+        type = DeviceModelsTypeIPadPro_inch12_9_3rd;
         string = @"iPad Pro (12.9-inch) (3rd generation) (A1876)";
     }
-    if ([platform isEqualToString:@"iPad8,6"]) {
-        type = DeviceModelsTypeIPadPro_3rd_inch12_9;
-        string = @"iPad Pro (12.9-inch) (3rd generation) (A1876)";
-    }
-    if ([platform isEqualToString:@"iPad8,7"]) {
-        type = DeviceModelsTypeIPadPro_3rd_inch12_9;
+    if ([platform isEqualToString:@"iPad8,7"] || [platform isEqualToString:@"iPad8,8"]) {
+        type = DeviceModelsTypeIPadPro_inch12_9_3rd;
         string = @"iPad Pro (12.9-inch) (3rd generation) (A1895/A1983/A2014)";
     }
-    if ([platform isEqualToString:@"iPad8,8"]) {
-        type = DeviceModelsTypeIPadPro_3rd_inch12_9;
-        string = @"iPad Pro (12.9-inch) (3rd generation) (A1895/A1983/A2014)";
+    
+    // TODO: iPad Pro        A??? ......
+    if ([platform isEqualToString:@"iPad8,9"] || [platform isEqualToString:@"iPad8,10"]) {
+        type = DeviceModelsTypeIPadPro_inch11_2nd;
+        string = @"iPad Pro (11-inch) (2nd generation) (?)";
+    }
+    if ([platform isEqualToString:@"iPad8,11"] || [platform isEqualToString:@"iPad8,12"]) {
+        type = DeviceModelsTypeIPadPro_inch12_9_4th;
+        string = @"iPad Pro (12.9-inch) (4th generation) (?)";
     }
     // TODO: iPad Pro 持续更新 ......
     
@@ -260,11 +254,7 @@
         type = DeviceModelsTypeIPhone3GS;
         string = @"iPhone 3GS (A1303/A1325)";
     }
-    if ([platform isEqualToString:@"iPhone3,1"]) {
-        type = DeviceModelsTypeIPhone4;
-        string = @"iPhone 4 (A1332)";
-    }
-    if ([platform isEqualToString:@"iPhone3,2"]) {
+    if ([platform isEqualToString:@"iPhone3,1"] || [platform isEqualToString:@"iPhone3,2"]) {
         type = DeviceModelsTypeIPhone4;
         string = @"iPhone 4 (A1332)";
     }
@@ -374,7 +364,7 @@
     }
     if ([platform isEqualToString:@"iPhone11,4"]) {
         type = DeviceModelsTypeIPhoneXSMax;
-        string = @"iPhone XS Max ()";
+        string = @"iPhone XS Max (?)";
     }
     if ([platform isEqualToString:@"iPhone12,1"]) {
         type = DeviceModelsTypeIPhone11;
@@ -387,6 +377,11 @@
     if ([platform isEqualToString:@"iPhone12,5"]) {
         type = DeviceModelsTypeIPhone11ProMax;
         string = @"iPhone 11 Pro Max (A2161/A2220/A2218)";
+    }
+    // TODO: iPhone     A??????   ......
+    if ([platform isEqualToString:@"iPhone12,8"]) {
+        type = DeviceModelsTypeIPhone11ProMax;
+        string = @"iPhone SE (2nd generation) (?)";
     }
     // TODO: iPhone 持续更新 ......
     
@@ -421,20 +416,16 @@
     }
     // TODO: iPod touch 持续更新 ......
     
-#pragma mark - iPhone Simulator
-    if ([platform isEqualToString:@"i386"]) {
-        type = DeviceModelsTypeIPhoneSimulator;
+#pragma mark - Simulator
+    if ([platform isEqualToString:@"i386"] || [platform isEqualToString:@"x86_64"]) {
+        type = DeviceModelsTypeSimulator;
         string = @"Simulator";
     }
-    if ([platform isEqualToString:@"x86_64"]) {
-        type = DeviceModelsTypeIPhoneSimulator;
-        string = @"Simulator";
-    }
-    
     
     if (modelsString) {
         modelsString(string);
     }
+    
     if (modelsType) {
         modelsType(type);
     }

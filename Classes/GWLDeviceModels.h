@@ -11,9 +11,9 @@
 NS_ASSUME_NONNULL_BEGIN
 
 typedef NS_ENUM(NSInteger, DeviceModelsType) {
-    DeviceModelsTypeIPhoneUnknown,
+    DeviceModelsTypeUnknown,
     
-    DeviceModelsTypeIPhoneSimulator,
+    DeviceModelsTypeSimulator,
     
     DeviceModelsTypeIPhone,
     DeviceModelsTypeIPhone3G,
@@ -63,11 +63,13 @@ typedef NS_ENUM(NSInteger, DeviceModelsType) {
     DeviceModelsTypeIPad_7th,
     
     DeviceModelsTypeIPadPro_inch12_9,
-    DeviceModelsTypeIPadPro_2nd_inch12_9,
-    DeviceModelsTypeIPadPro_3rd_inch12_9,
+    DeviceModelsTypeIPadPro_inch12_9_2nd,
+    DeviceModelsTypeIPadPro_inch12_9_3rd,
+    DeviceModelsTypeIPadPro_inch12_9_4th,
     DeviceModelsTypeIPadPro_inch9_7,
     DeviceModelsTypeIPadPro_inch10_5,
     DeviceModelsTypeIPadPro_inch11,
+    DeviceModelsTypeIPadPro_inch11_2nd,
     
     DeviceModelsTypeIPadAir,
     DeviceModelsTypeIPadAir2,
