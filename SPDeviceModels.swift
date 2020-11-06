@@ -1,7 +1,7 @@
 
 import UIKit
 
-public enum DeviceModelsType {
+enum DeviceModelsType {
     case Unknown
     
     case Simulator
@@ -76,11 +76,11 @@ public enum DeviceModelsType {
     case IPadAir_4th
 }
 
-public class SPDeviceModels {
+class SPDeviceModels {
     
-    public static let shared = SPDeviceModels()
+    static let shared = SPDeviceModels()
     
-    public var model = (DeviceModelsType.Unknown, "Unknown")
+    var model = (DeviceModelsType.Unknown, "Unknown")
     
     private init() {
         
