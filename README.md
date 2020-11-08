@@ -3,5 +3,5 @@
 
 
 
-[https://www.theiphonewiki.com/wiki/Models#cite_note-china-1](https://www.theiphonewiki.com/wiki/Models#cite_note-china-1)
+[https://www.theiphonewiki.com/wiki/Models](https://www.theiphonewiki.com/wiki/Models)
 
