@@ -1,7 +1,7 @@
 
 import UIKit
 
-enum DeviceModelsType {
+enum GODeviceModelsType {
     case Unknown
     
     case Simulator
@@ -76,11 +76,11 @@ enum DeviceModelsType {
     case IPadAir_4th
 }
 
-class SPDeviceModels {
+class GODeviceModels {
     
-    static let shared = SPDeviceModels()
+    static let shared = GODeviceModels()
     
-    var model = (DeviceModelsType.Unknown, "Unknown")
+    var model = (GODeviceModelsType.Unknown, "Unknown")
     
     private init() {
         
@@ -88,9 +88,9 @@ class SPDeviceModels {
     }
 }
 
-extension SPDeviceModels {
+extension GODeviceModels {
     
-    private func model(id: String) -> (type: DeviceModelsType, string: String) {
+    private func model(id: String) -> (type: GODeviceModelsType, string: String) {
         
         switch id {
         
@@ -328,7 +328,7 @@ extension SPDeviceModels {
     }
 }
 
-extension SPDeviceModels {
+extension GODeviceModels {
     
     private func identifier() -> String {
         

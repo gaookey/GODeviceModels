@@ -1,4 +1,4 @@
-# SPDeviceModels
+# GODeviceModels
 ##### iOS 设备型号判断
 
 
@@ -10,3 +10,4 @@
 ##### 简书文章
 
 [iOS 判断设备型号、设备尺寸](https://www.jianshu.com/p/203bd0f22762)
+
