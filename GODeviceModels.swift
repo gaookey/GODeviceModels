@@ -247,7 +247,7 @@ extension GODeviceModels {
         case "iPhone14,3":
             return (.IPhone13ProMax, "iPhone 13 Pro Max")
         case "iPhone14,6":
-            return (.IPhoneSE_3nd, "iPhone SE (3rd generation)")
+            return (.IPhoneSE_3rd, "iPhone SE (3rd generation)")
         case "iPhone14,7":
             return (.IPhone14, "iPhone 14")
         case "iPhone14,8":
